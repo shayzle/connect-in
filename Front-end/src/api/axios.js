@@ -2,7 +2,7 @@
 //
 import axios from "axios";
 //ici tu set la base url de ton api, à partir de ça tu peux faire des requêtes comme axios.get("/posts") ce qui nous donnera "http://localhost/api/posts"
-axios.defaults.baseURL = "http://localhost:8080/api";
+axios.defaults.baseURL = import.meta.env.VITE_API_URL ?? "http://localhost:8080/api";
 //ça si j'ai bien compris c'est pour accepter des fichier json dans les requêtes, c'est pas obligatoire mais c'est une bonne pratique
 axios.defaults.headers.common["accept"] = "application/json";
 
